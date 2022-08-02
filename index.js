@@ -116,5 +116,5 @@ export default {
 
   // It is necessary because we use vite-jest to tranform everything,
   // we'll inevitably encounter some CommonJS modules.
-  process: src => src
+  process: src => ({ code: src })
 }
