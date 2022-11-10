@@ -10,7 +10,7 @@ import {
 
   FS_PREFIX,
   fsPathFromId,
-  
+
   isVirtualFileRequest,
   virtualPathToFsPath
 } from './pathUtils.js'
@@ -48,7 +48,7 @@ async function processAsync(src, filepath) {
       // will this really happen?
       continue
     }
-    
+
     // when parsing dynamic imports, the starting and ending quotes are also included
     // note here we don't care about the case where the url is a variable
     // because Vite doesn't allow fully-dynamic imports.
@@ -74,7 +74,7 @@ async function processAsync(src, filepath) {
       )
       continue
     }
-    
+
     if (isVirtualFileRequest(url)) {
       const virtualFilePath = virtualPathToFsPath(url)
 
@@ -90,7 +90,7 @@ async function processAsync(src, filepath) {
       )
       continue
     }
-    
+
     if (url.startsWith('/')) {
       const projectFilePath = slashOnWindows(path.join(viteServer.config.root, url))
       const relativePath = `./${path.posix.relative(path.dirname(filepath), projectFilePath)}`
