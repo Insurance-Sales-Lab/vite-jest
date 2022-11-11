@@ -18,7 +18,7 @@
   "license": "MIT",
   "peerDependencies": {
     "jest": "^29.3.1",
-    "vite": "^3.2.3"
+    "vite": "^3.1.8"
   },
   "devDependencies": {
     "jest": "^27.4.3",
